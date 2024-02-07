@@ -18,7 +18,7 @@ const SearchForm = ({ onSearch }) => {
                 onChange={(e) => setQuery(e.target.value)}
             ></input>
             <button type="submit" onClick={handleSearch}>
-                Submit
+                Search
             </button>
         </form>
     );
