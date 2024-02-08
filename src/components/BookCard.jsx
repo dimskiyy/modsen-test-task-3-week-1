@@ -1,12 +1,13 @@
 import React from "react";
 import "./BookCard.css";
+import { Link } from "react-router-dom";
 
 const BookCard = ({ book }) => {
     if (!book) {
         return null;
     }
     return (
-        <div className="book_card" key={book.id}>
+        <Link to={`/Book/${book.id}`} className="book_card" key={book.id}>
             <div>
                 <h2>{book.title}</h2>
             </div>
@@ -19,7 +20,7 @@ const BookCard = ({ book }) => {
             <div>
                 <p>{book.authors}</p>
             </div>
-        </div>
+        </Link>
     );
 };
 
