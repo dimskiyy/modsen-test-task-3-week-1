@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { testData } from "../test_data";
-import BookCard from "./BookCard";
+import { testData } from "../../test_data";
+import BookCard from "../BookCard/BookCard";
 import "./BookList.css";
 
 const BookList = () => {
