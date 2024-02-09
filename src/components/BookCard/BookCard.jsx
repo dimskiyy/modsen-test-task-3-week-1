@@ -2,26 +2,19 @@ import React from "react";
 import "./BookCard.css";
 import { Link } from "react-router-dom";
 
-const BookCard = ({ book }) => {
-    if (!book) {
-        return null;
-    }
+function BookCard(props) {
+    const { id, img, title, authors, category } = props;
+  
     return (
-        <Link to={`/Book/${book.id}`} className="book_card" key={book.id}>
-            <div>
-                <h2>{book.title}</h2>
-            </div>
-            <div>
-                <img src={book.image_url} alt="#" />
-            </div>
-            <div>
-                <p>{book.genres}</p>
-            </div>
-            <div>
-                <p>{book.authors}</p>
-            </div>
-        </Link>
+      <Link to={`/Book/${id}`} className="book_card" data-id={id}>
+        <img src={img} className="card_img" alt={title} title={title}></img>
+        <div className="card_body">
+          <h5>{title}</h5>
+          <h6>{category?.slice(0, 1)}</h6>
+          <p>{authors?.join(', ')}</p>
+        </div>
+      </Link>
     );
-};
+  }
 
 export default BookCard;
