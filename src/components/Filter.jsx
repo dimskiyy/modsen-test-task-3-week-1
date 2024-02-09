@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 
-const Filter = () => {
-    const [category, setCategory] = useState("all");
-    const [sorting, setSorting] = useState("relevance");
+const Filter = ({ selectedCategory, selectedSorting, onCategoryChange, onSortingChange }) => {
+    const [category, setCategory] = useState(selectedCategory);
+    const [sorting, setSorting] = useState(selectedSorting);
+    
+    const handleCategoryChange = (e) => {
+        const value = e.target.value;
+        setCategory(value);
+        onCategoryChange(value);
+    };
+
+    const handleSortingChange = (e) => {
+        const value = e.target.value;
+        setSorting(value);
+        onSortingChange(value);
+    };
 
     return (
         <div className="filter">
             <select
                 value={category}
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={handleCategoryChange}
             >
                 <option value="all">All</option>
                 <option value="art">Art</option>
@@ -20,7 +32,7 @@ const Filter = () => {
             </select>
             <select
                 value={sorting}
-                onChange={(e) => setSorting(e.target.value)}
+                onChange={handleSortingChange}
             >
                 <option value="relevance">Relevance</option>
                 <option value="newest">Newest</option>

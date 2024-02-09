@@ -4,20 +4,27 @@ import BookCard from "../BookCard/BookCard";
 import "./BookList.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-const BookList = ({ search }) => { 
+const BookList = ({ search, category, sorting }) => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
         axios
             .get(
-                `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}&maxResults=30`
+                `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}&maxResults=30&orderBy=${sorting}`
             )
             .then((res) => {
-                console.log(res.data.items);
-                setBooks(res.data.items);
+                let filteredBooks = res.data.items;
+
+                if (category !== "all") {
+                    filteredBooks = filteredBooks.filter(book =>
+                        book.volumeInfo.categories && book.volumeInfo.categories.map(cat => cat.toLowerCase()).includes(category.toLowerCase())
+                    );
+                }
+
+                setBooks(filteredBooks);
             })
             .catch((err) => console.log(err));
-    }, [search]);
+    }, [search, category, sorting]);
 
     return (
         <div className="book_list">

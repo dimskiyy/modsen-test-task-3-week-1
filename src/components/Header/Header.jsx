@@ -1,5 +1,4 @@
 import React from "react";
-import Filter from "../Filter";
 import "./Header.css";
 
 const Header = () => {
@@ -11,7 +10,6 @@ const Header = () => {
                         <h1>Search for books</h1>
                     </div>
                 </div>
-                <Filter />
             </header>
         </>
     );
