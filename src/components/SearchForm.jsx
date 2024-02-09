@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-const SearchForm = ({ onSearch }) => {
+const SearchForm = ({ setSearch }) => {
     const [query, setQuery] = useState("");
 
-    const handleSearch = () => {
-        if (query.trim() !== "") {
-            onSearch(query.trim());
-        }
+    const handleSearch = (event) => {
+        event.preventDefault();
+        setSearch(query);
     };
 
     return (
@@ -18,7 +17,7 @@ const SearchForm = ({ onSearch }) => {
                 onChange={(e) => setQuery(e.target.value)}
             ></input>
             <button type="submit" onClick={handleSearch}>
-                Search
+                Submit
             </button>
         </form>
     );
