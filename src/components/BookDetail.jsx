@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { bookData } from "../test_data";
 import axios from "axios";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const BookDetail = () => {
     const { id } = useParams();
@@ -9,25 +9,39 @@ const BookDetail = () => {
 
     useEffect(() => {
         axios
-            .get(`${bookData}/${id}`)
+            .get(
+                `https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`
+            )
             .then((res) => {
+                console.log(res.data);
                 setBook(res.data);
             })
-            .catch((error) => console.log(error));
+            .catch((err) => console.log(err));
     }, [id]);
+
+    const img = book.volumeInfo?.imageLinks?.thumbnail || "";
+    const title = book.volumeInfo?.title || "";
+    const authors = book.volumeInfo?.authors || [];
+    const category = book.volumeInfo?.categories || [];
+    const description = book.volumeInfo?.description || "";
+
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
+
     return (
         <div className="book_details">
             <div>
-                <img src={book?.image_url} alt="#" />
+                <img src={img} alt="#" />
             </div>
             <div>
                 <h2>Category</h2>
-                <p>{book?.genres}</p>
-                <h2>{book?.title}</h2>
+                <p>{category.join(", ")}</p>
+                <h2>{title}</h2>
                 <h2>Authors</h2>
-                <p>{book?.authors}</p>
+                <p>{authors.join(", ")}</p>
                 <h2>Description</h2>
-                <p>{book?.description}</p>
+                <p>{description}</p>
             </div>
         </div>
     );
