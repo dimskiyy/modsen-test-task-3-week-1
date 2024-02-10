@@ -24,10 +24,13 @@ const BookList = ({ search, category, sorting }) => {
                                 .map((cat) => cat.toLowerCase())
                                 .includes(category.toLowerCase())
                     );
+
+                    setTotalItems(filteredBooks.length);
+                } else {
+                    setTotalItems(res.data.totalItems);
                 }
 
                 setBooks(filteredBooks);
-                setTotalItems(res.data.totalItems);
             })
             .catch((err) => console.log(err));
     }, [search, category, sorting]);

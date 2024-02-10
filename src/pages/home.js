@@ -5,7 +5,7 @@ import SearchForm from "../components/SearchForm";
 import Filter from "../components/Filter";
 
 const Home = () => {
-    const [search, setSearch] = useState("react");
+    const [search, setSearch] = useState("js");
     const [category, setCategory] = useState("all");
     const [sorting, setSorting] = useState("relevance");
 
