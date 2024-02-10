@@ -7,11 +7,13 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const BookList = ({ search, category, sorting }) => {
     const [books, setBooks] = useState([]);
     const [totalItems, setTotalItems] = useState(0);
+    const [startId, setStartId] = useState(0);
+    const [initialTotalItems, setInitialTotalItems] = useState(0);
 
     useEffect(() => {
         axios
             .get(
-                `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}&maxResults=30&orderBy=${sorting}`
+                `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}&maxResults=30&orderBy=${sorting}&startIndex=${startId}`
             )
             .then((res) => {
                 let filteredBooks = res.data.items;
@@ -25,19 +27,24 @@ const BookList = ({ search, category, sorting }) => {
                                 .includes(category.toLowerCase())
                     );
 
-                    setTotalItems(filteredBooks.length);
+                    if (startId === 0) {
+                        setInitialTotalItems(filteredBooks.length);
+                    }
                 } else {
-                    setTotalItems(res.data.totalItems);
+                    if (startId === 0) {
+                        setInitialTotalItems(res.data.totalItems);
+                    }
                 }
 
+                setTotalItems(filteredBooks.length);
                 setBooks(filteredBooks);
             })
             .catch((err) => console.log(err));
-    }, [search, category, sorting]);
+    }, [search, category, sorting, startId]);
 
     return (
         <div>
-            <p>Found {totalItems} books</p>
+            <p>Found {initialTotalItems} books</p>
             <div className="book_list">
                 {books.map((book) => (
                     <BookCard
@@ -53,6 +60,18 @@ const BookList = ({ search, category, sorting }) => {
                     />
                 ))}
             </div>
+            {books.length > 0 && initialTotalItems > 30 && (
+                <div className="load_more">
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setStartId((prevStartIndex) => prevStartIndex + 30);
+                        }}
+                    >
+                        Load more
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
