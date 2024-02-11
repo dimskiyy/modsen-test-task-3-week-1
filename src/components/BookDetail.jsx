@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import CircularProgress from "@mui/material/CircularProgress";
+import "./styles/Loader.css";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const BookDetail = () => {
     const { id } = useParams();
     const [book, setBook] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
 
     useEffect(() => {
+        setLoading(true);
+        setError("");
+
         axios
             .get(
                 `https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`
@@ -15,8 +23,13 @@ const BookDetail = () => {
             .then((res) => {
                 console.log(res.data);
                 setBook(res.data);
+                setLoading(false);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                console.log(err);
+                setError("Error fetching book data.");
+                setLoading(false);
+            });
     }, [id]);
 
     const img = book.volumeInfo?.imageLinks?.thumbnail || "";
@@ -28,6 +41,18 @@ const BookDetail = () => {
     useEffect(() => {
         document.title = title;
     }, [title]);
+
+    if (loading) {
+        return (
+            <div className="circularProgressContainer">
+                <CircularProgress size={200} />
+            </div>
+        );
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
 
     return (
         <div className="book_details">
