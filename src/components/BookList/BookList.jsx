@@ -53,14 +53,14 @@ const BookList = ({ search, category, sorting }) => {
     }, [search, category, sorting, startId]);
 
     return (
-        <div>
+        <div >
             {loading ? (
                 <div className="circularProgressContainer">
                     <CircularProgress size={200} />
                 </div>
             ) : (
                 <>
-                    <p>Found {initialTotalItems} books</p>
+                    <p className="result">Found {initialTotalItems} books</p>
                     <div className="book_list">
                         {books.map((book) => (
                             <BookCard
@@ -78,7 +78,7 @@ const BookList = ({ search, category, sorting }) => {
                     </div>
                     {books.length > 0 && initialTotalItems > 30 && (
                         <div className="load_more">
-                            <button
+                            <button className="load_btn"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setStartId(

@@ -1,0 +1,29 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+    background-color: black;
+    padding: 8px;
+}
+.filter_label {
+    margin-right: 1em;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #525252;
+}
+.filter_select {
+    padding: 5px;
+    border: 1px solid #9f9fbd;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+@media (min-width: 720px) {
+    .filter {
+        flex-direction: row;
+    } 
+}

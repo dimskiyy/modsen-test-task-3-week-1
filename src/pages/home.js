@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import BookList from "../components/BookList/BookList";
 import Header from "../components/Header/Header";
-import SearchForm from "../components/SearchForm";
-import Filter from "../components/Filter";
+import SearchForm from "../components/SearchForm/SearchForm";
+import Filter from "../components/Filter/Filter";
 
 const Home = () => {
     const [search, setSearch] = useState("js");

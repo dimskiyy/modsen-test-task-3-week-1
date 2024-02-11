@@ -1,13 +1,16 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <>
             <header className="header">
-                <div className="header_logo">
+                <div className="header_wrapper">
                     <div className="header_title">
-                        <h1>Search for books</h1>
+                        <Link className="header_logo" to={"/"}>
+                            <h1>Books API App</h1>
+                        </Link>
                     </div>
                 </div>
             </header>
