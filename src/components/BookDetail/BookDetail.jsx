@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import CircularProgress from "@mui/material/CircularProgress";
-import "./styles/Loader.css";
+import "../styles/Loader.css";
+import "./BookDetail.css";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -56,17 +57,16 @@ const BookDetail = () => {
 
     return (
         <div className="book_details">
-            <div>
-                <img src={img} alt="#" />
+            <div className="book_cover_wrapper">
+                <img src={img} alt="#" className="book_img"/>
             </div>
-            <div>
-                <h2>Category</h2>
-                <p>{category.join(", ")}</p>
-                <h2>{title}</h2>
-                <h2>Authors</h2>
-                <p>{authors.join(", ")}</p>
-                <h2>Description</h2>
-                <p>{description}</p>
+            <div className="book_info_wrapper">
+                <h2 className="book_title">{title}</h2>
+                <p className="book_category">{category.join(", ")}</p>
+                <h3>Authors</h3>
+                <p className="book_authors">{authors.join(", ")}</p>
+                <h3>Description</h3>
+                <p className="book_description">{description}</p>
             </div>
         </div>
     );
