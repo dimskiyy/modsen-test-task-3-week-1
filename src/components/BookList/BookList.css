@@ -15,3 +15,18 @@
     color: #131317;
     font-size: 20px;
 }
+
+.load_btn{
+    margin: 40px auto 50px;
+    max-width: 200px;
+    display: flex;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: rgb(229, 229, 229);
+    background-color: #949494;
+    box-shadow: 0 9px #7f7f7f;
+    border: none;
+}
