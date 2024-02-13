@@ -8,7 +8,11 @@ const Header = () => {
             <header className="header">
                 <div className="header_wrapper">
                     <div className="header_title">
-                        <Link className="header_logo" to={"/"}>
+                        <Link
+                            className="header_logo"
+                            to={"/"}
+                            onClick={() => (document.title = "Home Page")}
+                        >
                             <h1>Books API App</h1>
                         </Link>
                     </div>
