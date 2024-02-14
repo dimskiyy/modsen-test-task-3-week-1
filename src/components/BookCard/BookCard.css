@@ -1,11 +1,10 @@
-.card {
-    width: 200px;
+.book_card {
+    width: 260px;
     flex: 0 1 auto;
     justify-content: space-between;
 }
 .book_card {
     text-decoration: none;
-    cursor: pointer;
 }
 .card_img {
     border: 0.5px solid #d6dae1;
@@ -14,7 +13,7 @@
     border-radius: 4px;
 }
 .card_img:hover {
-    border: 1px solid rgb(14, 148, 150);
+    border: 1px solid rgb(124, 88, 234);
 }
 .card_title {
     margin-bottom: 0.5rem;
@@ -23,7 +22,6 @@
     font-size: 16px;
     text-overflow: ellipsis;
 }
-
 .card_category {
     margin-bottom: 0.5rem;
     font-size: 15px;
@@ -39,7 +37,7 @@
     .card_title {
         font-size: 18px;
     }
-    .card_text {
+    .card_authors {
         font-size: 15px;
     }
 }

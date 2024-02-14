@@ -10,17 +10,22 @@ const SearchForm = ({ setSearch }) => {
     };
 
     return (
-        <form className="search_form">
+        <div className="header_form">
+           <form className="search_form">
             <input
                 type="text"
+                className="search_input"
                 placeholder="Book name"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)
+                }
             ></input>
-            <button type="submit" onClick={handleSearch}>
+            <button className="search_btn" type="submit" onClick={handleSearch}>
                 Submit
             </button>
-        </form>
+        </form> 
+        </div>
+        
     );
 };
 

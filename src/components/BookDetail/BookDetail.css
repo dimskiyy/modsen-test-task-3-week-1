@@ -1,16 +1,19 @@
 .book_details {
     display: flex;
     height: max-content;
+    /* background-color: rgba(227, 227, 227, 0.832); */
 }
+
 .book_cover_wrapper {
     width: 40%;
-    background-color: rgba(227, 227, 227, 0.832);
+    /* background-color: rgba(227, 227, 227, 0.832); */
     min-width: 250px;
     max-width: 400px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
+
 .book_img {
     width: 60%;
     height: auto;
@@ -18,28 +21,33 @@
     margin: 20px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
 .book_info_wrapper {
     width: 60%;
     text-align: left;
     padding: 40px;
 }
+
 .book_category {
     color: rgb(129, 129, 129);
     font-size: 16px;
     margin-bottom: 40px;
 }
+
 .book_title {
     font-weight: bold;
     color: black;
     font-size: 30px;
     margin-bottom: 10px;
 }
+
 .book_authors {
     color: rgb(129, 129, 129);
     text-decoration: underline;
     font-size: 16px;
     margin-bottom: 30px;
 }
+
 .book_description {
     font-weight: 500;
     color: black;
@@ -47,4 +55,50 @@
     border: 1px solid black;
     font-size: 13px;
     padding: 15px;
+}
+
+@media (min-width: 480px) {
+    .book_title {
+        font-size: 18px;
+    }
+    .book_authors {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book_details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book_cover_wrapper {
+        width: 100%;
+        max-width: none;
+    }
+
+    .book_info_wrapper {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .book_img {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .book_title {
+        font-size: 24px;
+    }
+
+    .book_authors {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .book_description {
+        font-size: 12px;
+        padding: 10px;
+    }
 }

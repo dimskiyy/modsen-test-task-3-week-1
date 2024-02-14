@@ -5,19 +5,19 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <>
-            <header className="header">
+            <div className="header">
                 <div className="header_wrapper">
-                    <div className="header_title">
+                    <h1 className="header_title">
                         <Link
                             className="header_logo"
                             to={"/"}
                             onClick={() => (document.title = "Home Page")}
                         >
-                            <h1>Books API App</h1>
+                            Books API App
                         </Link>
-                    </div>
+                    </h1>
                 </div>
-            </header>
+            </div>
         </>
     );
 };
