@@ -4,14 +4,12 @@
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 1em;
-    background-color: black;
     padding: 10px;
 }
 .search_form {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
 }
 .search_input {
     padding: 10px;
@@ -34,10 +32,10 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .search_btn:hover {
     background-color: #0056b3;
 }
+
 @media (min-width: 770px) {
     .header_form {
         flex-direction: row;

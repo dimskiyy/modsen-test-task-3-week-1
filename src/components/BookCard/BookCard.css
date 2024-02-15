@@ -1,9 +1,7 @@
 .book_card {
-    width: 260px;
+    width: 190px;
     flex: 0 1 auto;
     justify-content: space-between;
-}
-.book_card {
     text-decoration: none;
 }
 .card_img {
@@ -33,6 +31,7 @@
     font-size: 14px;
     color: black;
 }
+
 @media (min-width: 480px) {
     .card_title {
         font-size: 18px;

@@ -13,7 +13,7 @@ const Header = () => {
                             to={"/"}
                             onClick={() => (document.title = "Home Page")}
                         >
-                            Books API App
+                            Search for books
                         </Link>
                     </h1>
                 </div>
