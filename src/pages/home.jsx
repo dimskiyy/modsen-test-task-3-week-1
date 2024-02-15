@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import SearchForm from "../components/SearchForm/SearchForm";
 import Filter from "../components/Filter/Filter";
 import "../components/styles/Layout.css";
+import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 
 const Home = () => {
     const [search, setSearch] = useState("js");
@@ -20,17 +21,23 @@ const Home = () => {
 
     return (
         <div className="main-container">
-            <div className="header_search_filter">
-                <Header />
-                <SearchForm setSearch={setSearch} />
-                <Filter
-                    selectedCategory={category}
-                    selectedSorting={sorting}
-                    onCategoryChange={handleCategoryChange}
-                    onSortingChange={handleSortingChange}
+            <ErrorBoundary>
+                <div className="header_search_filter">
+                    <Header />
+                    <SearchForm setSearch={setSearch} />
+                    <Filter
+                        selectedCategory={category}
+                        selectedSorting={sorting}
+                        onCategoryChange={handleCategoryChange}
+                        onSortingChange={handleSortingChange}
+                    />
+                </div>
+                <BookList
+                    search={search}
+                    category={category}
+                    sorting={sorting}
                 />
-            </div>
-            <BookList search={search} category={category} sorting={sorting} />
+            </ErrorBoundary>
         </div>
     );
 };
