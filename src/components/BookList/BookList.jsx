@@ -9,7 +9,6 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 const BookList = ({ search, category, sorting }) => {
     const [books, setBooks] = useState([]);
-    const [totalItems, setTotalItems] = useState(0);
     const [startId, setStartId] = useState(0);
     const [initialTotalItems, setInitialTotalItems] = useState(0);
     const [loading, setLoading] = useState(true);
@@ -42,9 +41,7 @@ const BookList = ({ search, category, sorting }) => {
                     }
                 }
 
-                setTotalItems(filteredBooks.length);
                 setBooks(filteredBooks);
-                // setBooks(prevBooks => [...prevBooks, ...filteredBooks]);
                 setLoading(false);
             })
             .catch((err) => {
@@ -54,7 +51,7 @@ const BookList = ({ search, category, sorting }) => {
     }, [search, category, sorting, startId]);
 
     return (
-        <div >
+        <div>
             {loading ? (
                 <div className="circularProgressContainer">
                     <CircularProgress variant="indeterminate" size={200} />
