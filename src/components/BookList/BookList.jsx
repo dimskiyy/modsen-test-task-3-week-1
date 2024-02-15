@@ -44,6 +44,7 @@ const BookList = ({ search, category, sorting }) => {
 
                 setTotalItems(filteredBooks.length);
                 setBooks(filteredBooks);
+                // setBooks(prevBooks => [...prevBooks, ...filteredBooks]);
                 setLoading(false);
             })
             .catch((err) => {
@@ -56,7 +57,7 @@ const BookList = ({ search, category, sorting }) => {
         <div >
             {loading ? (
                 <div className="circularProgressContainer">
-                    <CircularProgress size={200} />
+                    <CircularProgress variant="indeterminate" size={200} />
                 </div>
             ) : (
                 <>

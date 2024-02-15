@@ -46,7 +46,7 @@ const BookDetail = () => {
     if (loading) {
         return (
             <div className="circularProgressContainer">
-                <CircularProgress size={200} />
+                <CircularProgress variant="indeterminate" size={200} />
             </div>
         );
     }
