@@ -5,6 +5,7 @@ import LoadButton from "../LoadButton/LoadButton";
 import useGoogleBookApi from "../API/useGoogleBookApi";
 import "./BookList.css";
 import "../styles/Loader.css";
+import { coverNoImage } from "../../Constants/BookCovers";
 
 const BookList = ({ search, category, sorting }) => {
     const [startId, setStartId] = useState(0);
@@ -36,7 +37,7 @@ const BookList = ({ search, category, sorting }) => {
                                 id={book.id}
                                 img={
                                     book.volumeInfo.imageLinks?.thumbnail ||
-                                    "https://via.placeholder.com/180x250/566273/FFFFFF?text=no%20image"
+                                    coverNoImage
                                 }
                                 title={book.volumeInfo.title}
                                 authors={book.volumeInfo.authors}
