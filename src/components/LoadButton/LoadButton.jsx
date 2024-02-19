@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const LoadButton = ({onClick}) => {
+const LoadButton = ({ onClick }) => {
     const handleClick = (e) => {
         e.preventDefault();
         onClick();

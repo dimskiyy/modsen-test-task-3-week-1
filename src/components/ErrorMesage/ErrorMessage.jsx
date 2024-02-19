@@ -1,9 +1,15 @@
 import React from "react";
-import img from './error.gif';
+import img from "./error.gif";
 
 const ErrorMessage = () => {
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+            }}
+        >
             <img
                 style={{
                     display: "block",
@@ -15,10 +21,14 @@ const ErrorMessage = () => {
                 src={img}
                 alt="Error"
             />
-            <h2 style={{
-                width: "350px",
-                textAlign: "center"
-            }}>Something went wrong! Try to use VPN(T_T)</h2>
+            <h2
+                style={{
+                    width: "350px",
+                    textAlign: "center",
+                }}
+            >
+                Something went wrong! Try to use VPN(T_T)
+            </h2>
         </div>
     );
 };

@@ -59,7 +59,7 @@ const BookDetail = () => {
     return (
         <div className="book_details">
             <div className="book_cover_wrapper">
-                <img src={img} alt="#" className="book_img"/>
+                <img src={img} alt="#" className="book_img" />
             </div>
             <div className="book_info_wrapper">
                 <h2 className="book_title">{title}</h2>

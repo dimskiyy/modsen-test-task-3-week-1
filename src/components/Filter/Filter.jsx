@@ -9,7 +9,6 @@ const Filter = ({
     onCategoryChange,
     onSortingChange,
 }) => {
-    
     const [category, setCategory] = useState(selectedCategory);
     const [sorting, setSorting] = useState(selectedSorting);
 

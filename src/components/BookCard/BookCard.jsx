@@ -3,7 +3,6 @@ import "./BookCard.css";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ id, img, title, authors, category }) => {
-
     return (
         <Link to={`/Book/${id}`} className="book_card" data-id={id}>
             <img src={img} className="card_img" alt={title} title={title}></img>

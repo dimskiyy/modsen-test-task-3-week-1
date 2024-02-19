@@ -1,18 +1,18 @@
-.book_list{
+.book_list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
     margin-bottom: 1em;
 }
-.result{
+.result {
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
     color: #131317;
     font-size: 20px;
 }
-.load_btn{
+.load_btn {
     margin: 40px auto 50px;
     max-width: 200px;
     display: flex;
