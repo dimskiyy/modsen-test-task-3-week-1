@@ -4,6 +4,7 @@ import BookCard from "../BookCard/BookCard";
 import "./BookList.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import "../styles/Loader.css";
+import LoadButton from "../LoadButton/LoadButton";
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
 const API_KEY = "AIzaSyCIxIIcpTwWrV5HmCj_q4AWZRAqD7y6CFI";
@@ -51,6 +52,10 @@ const BookList = ({ search, category, sorting }) => {
             });
     }, [search, category, sorting, startId]);
 
+    const handleLoadMore = () => {
+        setStartId((prevStartIndex) => prevStartIndex + 30);
+    };
+
     return (
         <div>
             {loading ? (
@@ -76,18 +81,7 @@ const BookList = ({ search, category, sorting }) => {
                         ))}
                     </div>
                     {books.length > 0 && initialTotalItems > 30 && (
-                        <div className="load_more">
-                            <button className="load_btn"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setStartId(
-                                        (prevStartIndex) => prevStartIndex + 30
-                                    );
-                                }}
-                            >
-                                Load more
-                            </button>
-                        </div>
+                        <LoadButton onClick={handleLoadMore} />
                     )}
                 </>
             )}

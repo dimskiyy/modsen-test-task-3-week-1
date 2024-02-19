@@ -3,6 +3,10 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+    const handleLinkClick = () => {
+        document.title = "Home Page";
+    };
+
     return (
         <>
             <div className="header">
@@ -11,7 +15,7 @@ const Header = () => {
                         <Link
                             className="header_logo"
                             to={"/"}
-                            onClick={() => (document.title = "Home Page")}
+                            onClick={handleLinkClick}
                         >
                             Search for books
                         </Link>

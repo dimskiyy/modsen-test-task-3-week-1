@@ -2,8 +2,7 @@ import React from "react";
 import "./BookCard.css";
 import { Link } from "react-router-dom";
 
-const BookCard = (props) => {
-    const { id, img, title, authors, category } = props;
+const BookCard = ({ id, img, title, authors, category }) => {
 
     return (
         <Link to={`/Book/${id}`} className="book_card" data-id={id}>
