@@ -1,8 +1,10 @@
+import "../components/styles/Layout.css";
+
 import React from "react";
+
 import BookDetail from "../components/BookDetail/BookDetail";
 import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 import Header from "../components/Header/Header";
-import "../components/styles/Layout.css";
 
 const Book = () => {
     return (

@@ -8,12 +8,14 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["react"],
+    "plugins": ["react", "simple-import-sort"],
     "rules": {
         "react/prop-types": "off",
         "no-unused-vars": "warn",
         "no-console": "off",
         "prefer-const": "error",
-        "sort-imports": "off"
+        "sort-imports": "off",
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
     }
 }
