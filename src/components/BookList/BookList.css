@@ -1,3 +1,5 @@
+@import "../styles/ConstColors.css";
+
 .book_list {
     display: flex;
     justify-content: center;
@@ -9,7 +11,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
-    color: black;
+    color: var(--black);
     font-size: 20px;
 }
 .load_btn {
@@ -21,8 +23,8 @@
     cursor: pointer;
     text-align: center;
     outline: none;
-    color: rgb(229, 229, 229);
-    background-color: #949494;
-    box-shadow: 0 9px #7f7f7f;
+    color: var(--gray-tertiary);
+    background-color: var(--gray-quaternary);
+    box-shadow: 0 9px var(--gray-quinary);
     border: none;
 }

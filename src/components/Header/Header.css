@@ -1,3 +1,5 @@
+@import "../styles/ConstColors.css";
+
 .header {
     display: flex;
     flex-direction: column;
@@ -12,7 +14,7 @@
 .header_title {
     font-weight: 1000;
     font-size: 33px;
-    color: whitesmoke;
+    color: var(--white-quaternary);
     margin: auto;
 }
 .header_logo {

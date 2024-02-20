@@ -1,3 +1,5 @@
+@import "../styles/ConstColors.css";
+
 .book_card {
     width: 190px;
     flex: 0 1 auto;
@@ -5,17 +7,17 @@
     text-decoration: none;
 }
 .card_img {
-    border: 0.5px solid #d6dae1;
+    border: 0.5px solid var(--white-tertiary);
     box-sizing: border-box;
-    box-shadow: 0px 2px 4px rgba(89, 115, 148, 0.3);
+    box-shadow: 0px 2px 4px var(--dark-blue);
     border-radius: 4px;
 }
 .card_img:hover {
-    border: 1px solid rgb(124, 88, 234);
+    border: 1px solid var(--purple-blue);
 }
 .card_title {
     margin-bottom: 0.5rem;
-    color: black;
+    color: var(--black);
     font-weight: bold;
     font-size: 16px;
     text-overflow: ellipsis;
@@ -24,12 +26,12 @@
     margin-bottom: 0.5rem;
     font-size: 15px;
     font-weight: 600;
-    color: black;
+    color: var(--black);
 }
 .card_authors {
     margin-bottom: 0;
     font-size: 14px;
-    color: black;
+    color: var(--black);
 }
 
 @media (min-width: 480px) {

@@ -1,0 +1,19 @@
+:root {
+    --white-primary: #ccc;
+    --white-secondary: rgba(227, 227, 227, 0.832);
+    --white-tertiary: #d6dae1;
+    --white-quaternary: rgb(245, 245, 245);
+    --gray-primary: #b0b8c1;
+    --gray-secondary: #9f9fbd;
+    --gray-tertiary: rgb(229, 229, 229);
+    --gray-quaternary: #949494;
+    --gray-quinary: #7f7f7f;
+    --gray-senary: rgb(129, 129, 129);
+    --blue: #007bff;
+    --dark-blue: rgba(89, 115, 148, 0.3);
+    --purple-blue: rgb(124, 88, 234);
+    --black: #000;
+    --black-primary: rgba(0, 0, 0, 0.25);
+    --black-secondary: rgba(0, 0, 0, 0.22);
+    --white: #fff;
+}

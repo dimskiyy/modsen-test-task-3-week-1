@@ -1,3 +1,5 @@
+@import "../styles/ConstColors.css";
+
 .filter {
     display: flex;
     flex-direction: column;
@@ -12,11 +14,11 @@
     font-size: 14px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: whitesmoke;
+    color: var(--white-quaternary);
 }
 .filter_select {
     padding: 5px;
-    border: 1px solid #9f9fbd;
+    border: 1px solid var(--gray-secondary);
     box-sizing: border-box;
     border-radius: 4px;
 }

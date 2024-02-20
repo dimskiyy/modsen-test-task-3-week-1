@@ -1,3 +1,5 @@
+@import "../styles/ConstColors.css";
+
 .header_form {
     display: flex;
     flex-direction: column;
@@ -13,19 +15,19 @@
 }
 .search_input {
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--white-primary);
     border-radius: 5px;
     margin-right: 10px;
     font-size: 16px;
 }
 .search_input:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--blue);
 }
 .search_btn {
     padding: 10px 20px;
-    background-color: #b0b8c1;
-    color: #fff;
+    background-color: var(--gray-primary);
+    color: var(--white);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -33,7 +35,7 @@
     transition: background-color 0.3s ease;
 }
 .search_btn:hover {
-    background-color: #0056b3;
+    background-color: var(--blue);
 }
 
 @media (min-width: 770px) {
