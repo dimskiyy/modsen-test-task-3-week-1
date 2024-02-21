@@ -4,7 +4,7 @@ import "./BookList.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import React, { useState } from "react";
 
-import { coverNoImage } from "../../constants/BookCovers";
+import { coverNoImage } from "../../Constants/BookCovers";
 import useGoogleBookApi from "../API/useGoogleBookApi";
 import BookCard from "../BookCard/BookCard";
 import LoadButton from "../LoadButton/LoadButton";
