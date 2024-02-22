@@ -5,10 +5,10 @@ export const categories = [
     { value: "computers", label: "Computers" },
     { value: "history", label: "History" },
     { value: "medical", label: "Medical" },
-    { value: "poetry", label: "Poetry" },
+    { value: "poetry", label: "Poetry" }
 ];
 
 export const sortingOptions = [
     { value: "relevance", label: "Relevance" },
-    { value: "newest", label: "Newest" },
+    { value: "newest", label: "Newest" }
 ];

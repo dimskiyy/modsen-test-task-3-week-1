@@ -8,7 +8,7 @@ const ErrorMessage = () => {
             style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
+                alignItems: "center"
             }}
         >
             <img
@@ -17,7 +17,7 @@ const ErrorMessage = () => {
                     width: "250px",
                     height: "250px",
                     objectFit: "contain",
-                    margin: "0 auto",
+                    margin: "0 auto"
                 }}
                 src={img}
                 alt="Error"
@@ -25,7 +25,7 @@ const ErrorMessage = () => {
             <h2
                 style={{
                     width: "350px",
-                    textAlign: "center",
+                    textAlign: "center"
                 }}
             >
                 Something went wrong! Try to use VPN(T_T)

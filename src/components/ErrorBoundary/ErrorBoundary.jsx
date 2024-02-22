@@ -4,13 +4,13 @@ import ErrorMessage from "../ErrorMesage/ErrorMessage";
 
 class ErrorBoundary extends Component {
     state = {
-        error: false,
+        error: false
     };
 
     componentDidCatch(error, errorInfo) {
         console.log(error, errorInfo);
         this.setState({
-            error: true,
+            error: true
         });
     }
 

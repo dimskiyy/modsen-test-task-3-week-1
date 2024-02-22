@@ -15,7 +15,7 @@ const NotFound = () => {
                 flexDirection: "column",
                 gap: "64px",
                 minHeight: "100vh",
-                backgroundColor: "FFFFFF",
+                backgroundColor: "FFFFFF"
             }}
         >
             <Typography variant="h1" fontSize="128px" textAlign="center">
