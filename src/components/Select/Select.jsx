@@ -1,3 +1,5 @@
+import "./Select.css";
+
 import React from "react";
 
 const Select = ({ label, value, options, onChange, id }) => {
