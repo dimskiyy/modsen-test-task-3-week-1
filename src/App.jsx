@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { RoutesConfig } from "./Constants/Routes";
+import { RoutesConfig } from "./constants/Routes";
 import NotFound from "./pages/404/NotFound";
 import Book from "./pages/book";
 import Home from "./pages/home";

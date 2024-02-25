@@ -2,7 +2,7 @@ import "./Filter.css";
 
 import React, { useState } from "react";
 
-import { categories, sortingOptions } from "../../Constants/Categories";
+import { categories, sortingOptions } from "../../constants/Categories";
 import Select from "../Select/Select";
 
 const Filter = ({
