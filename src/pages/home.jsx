@@ -1,5 +1,3 @@
-import "../styles/Layout.css";
-
 import React, { useState } from "react";
 
 import BookList from "../components/BookList/BookList";
@@ -7,6 +5,8 @@ import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 import Filter from "../components/Filter/Filter";
 import Header from "../components/Header/Header";
 import SearchForm from "../components/SearchForm/SearchForm";
+
+import "../styles/Layout.css";
 
 const Home = () => {
     const [search, setSearch] = useState("js");

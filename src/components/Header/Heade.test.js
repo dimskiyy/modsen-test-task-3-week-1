@@ -1,8 +1,8 @@
-import "@testing-library/jest-dom/extend-expect";
-
-import { fireEvent, render } from "@testing-library/react";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { fireEvent, render } from "@testing-library/react";
+
+import "@testing-library/jest-dom/extend-expect";
 
 import Header from "./Header";
 

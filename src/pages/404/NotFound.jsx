@@ -1,5 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
 import React, { useEffect } from "react";
+import { Box, Button, Typography } from "@mui/material";
 
 const NotFound = () => {
     useEffect(() => {
