@@ -9,7 +9,7 @@ const SearchForm = ({ setSearch }) => {
         event.preventDefault();
         setSearch(query);
     };
-    
+
     const handleInputChange = (event) => {
         setQuery(event.target.value);
     };
