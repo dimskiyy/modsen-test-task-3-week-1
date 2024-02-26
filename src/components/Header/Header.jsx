@@ -3,6 +3,8 @@ import "./Header.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { RoutesConfig } from "../../constants/Routes";
+
 const Header = () => {
     const handleLinkClick = () => {
         document.title = "Home Page";
@@ -15,7 +17,7 @@ const Header = () => {
                     <h1 className="header_title">
                         <Link
                             className="header_logo"
-                            to={"/"}
+                            to={RoutesConfig.HOME}
                             onClick={handleLinkClick}
                         >
                             Search for books
