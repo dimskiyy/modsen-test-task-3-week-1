@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { RoutesConfig } from "../../constants/Routes";
@@ -6,20 +6,16 @@ import { RoutesConfig } from "../../constants/Routes";
 import "./Header.css";
 
 const Header = () => {
-    const handleLinkClick = () => {
+    useEffect(() => {
         document.title = "Home Page";
-    };
+    }, []);
 
     return (
         <>
             <div className="header">
                 <div className="header_wrapper">
                     <h1 className="header_title">
-                        <Link
-                            className="header_logo"
-                            to={RoutesConfig.HOME}
-                            onClick={handleLinkClick}
-                        >
+                        <Link className="header_logo" to={RoutesConfig.HOME}>
                             Search for books
                         </Link>
                     </h1>
