@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { RoutesConfig } from "../../constants/Routes";
@@ -6,10 +6,6 @@ import { RoutesConfig } from "../../constants/Routes";
 import "./Header.css";
 
 const Header = () => {
-    useEffect(() => {
-        document.title = "Home Page";
-    }, []);
-
     return (
         <>
             <div className="header">

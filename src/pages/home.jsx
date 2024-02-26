@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import BookList from "../components/BookList/BookList";
 import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
@@ -20,6 +20,10 @@ const Home = () => {
     const handleSortingChange = (selectedSorting) => {
         setSorting(selectedSorting);
     };
+
+    useEffect(() => {
+        document.title = "Home Page";
+    }, []);
 
     return (
         <div className="main-container">
