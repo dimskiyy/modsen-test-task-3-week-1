@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-// const API_KEY = process.env.REACT_APP_API_KEY;
-const API_KEY = "AIzaSyCIxIIcpTwWrV5HmCj_q4AWZRAqD7y6CFI";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const useGoogleBookApi = (search, category, sorting, startId) => {
     const [books, setBooks] = useState([]);
