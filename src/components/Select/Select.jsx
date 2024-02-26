@@ -14,9 +14,9 @@ const Select = ({ label, value, options, onChange, id }) => {
                 id={id}
                 className="filter_select"
             >
-                {options.map((option) => (
-                    <option key={option.value} value={option.value}>
-                        {option.label}
+                {options.map(({ value: optionValue, label: optionLabel }) => (
+                    <option key={optionValue} value={optionValue}>
+                        {optionLabel}
                     </option>
                 ))}
             </select>
