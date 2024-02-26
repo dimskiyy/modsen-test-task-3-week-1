@@ -1,6 +1,6 @@
 import React from "react";
 
-import img from "./error.gif";
+import img from "../../assets/img/error.png";
 
 const ErrorMessage = () => {
     return (
@@ -17,7 +17,8 @@ const ErrorMessage = () => {
                     width: "250px",
                     height: "250px",
                     objectFit: "contain",
-                    margin: "0 auto"
+                    margin: "0 auto",
+                    padding: "10px"
                 }}
                 src={img}
                 alt="Error"
