@@ -1,4 +1,4 @@
-import "../styles/Loader.css";
+import "../../styles/Loader.css";
 import "./BookDetail.css";
 
 import CircularProgress from "@mui/material/CircularProgress";
