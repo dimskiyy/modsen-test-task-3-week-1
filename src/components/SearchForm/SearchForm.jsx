@@ -9,6 +9,10 @@ const SearchForm = ({ setSearch }) => {
         event.preventDefault();
         setSearch(query);
     };
+    
+    const handleInputChange = (event) => {
+        setQuery(event.target.value);
+    };
 
     return (
         <div className="header_form">
@@ -18,7 +22,7 @@ const SearchForm = ({ setSearch }) => {
                     className="search_input"
                     placeholder="Book name"
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={handleInputChange}
                 ></input>
                 <button
                     className="search_btn"
