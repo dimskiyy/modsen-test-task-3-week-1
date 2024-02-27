@@ -1,6 +1,6 @@
-import React, { useCallback } from "react";
+import React, { memo, useCallback } from "react";
 
-const LoadButton = React.memo(function LoadButton({ onClick }) {
+const LoadButton = memo(function LoadButton({ onClick }) {
     const handleClick = useCallback(
         (e) => {
             e.preventDefault();

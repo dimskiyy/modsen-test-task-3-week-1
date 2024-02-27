@@ -1,17 +1,11 @@
-import React from "react";
+import React, { memo, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 import { RoutesConfig } from "../../constants/Routes";
 
 import "./BookCard.css";
 
-const BookCard = React.memo(function BookCard({
-    id,
-    img,
-    title,
-    authors,
-    category
-}) {
+const BookCard = memo(function BookCard({ id, img, title, authors, category }) {
     return (
         <Link
             to={`${RoutesConfig.BOOK_CARD}/${id}`}
