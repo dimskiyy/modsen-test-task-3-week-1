@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 
 import { coverNoImage } from "../../constants/BookCovers";
@@ -9,7 +9,7 @@ import LoadButton from "../LoadButton/LoadButton";
 import "../../styles/Loader.css";
 import "./BookList.css";
 
-const BookList = ({ search, category, sorting }) => {
+const BookList = memo(function BookList({ search, category, sorting }) {
     const [startId, setStartId] = useState(0);
 
     const { books, initialTotalItems, loading } = useGoogleBookAPI(
@@ -54,6 +54,6 @@ const BookList = ({ search, category, sorting }) => {
             )}
         </div>
     );
-};
+});
 
 export default BookList;
