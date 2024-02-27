@@ -1,7 +1,6 @@
-import React, { memo, useCallback } from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
-
-import { RoutesConfig } from "../../constants/Routes";
+import { RoutesConfig } from "constants/Routes";
 
 import "./BookCard.css";
 

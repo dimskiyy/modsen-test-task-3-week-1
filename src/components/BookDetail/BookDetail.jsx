@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import axios from "axios";
 
-import "../../styles/Loader.css";
+import "styles/Loader.css";
 import "./BookDetail.css";
 
 const API_KEY = process.env.REACT_APP_API_KEY;

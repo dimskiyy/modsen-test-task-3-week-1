@@ -1,12 +1,12 @@
 import React, { memo, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
+import { coverNoImage } from "constants/BookCovers";
+import useGoogleBookAPI from "hooks/useGoogleBookAPI";
 
-import { coverNoImage } from "../../constants/BookCovers";
-import useGoogleBookAPI from "../../hooks/useGoogleBookAPI";
-import BookCard from "../BookCard/BookCard";
-import LoadButton from "../LoadButton/LoadButton";
+import BookCard from "components/BookCard/BookCard";
+import LoadButton from "components/LoadButton/LoadButton";
 
-import "../../styles/Loader.css";
+import "styles/Loader.css";
 import "./BookList.css";
 
 const BookList = memo(function BookList({ search, category, sorting }) {

@@ -1,8 +1,8 @@
 import React from "react";
 
-import BookDetail from "../components/BookDetail/BookDetail";
-import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
-import Header from "../components/Header/Header";
+import BookDetail from "components/BookDetail/BookDetail";
+import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
+import Header from "components/Header/Header";
 
 import "../styles/Layout.css";
 

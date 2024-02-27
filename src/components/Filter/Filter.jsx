@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { categories, sortingOptions } from "constants/Categories";
 
-import { categories, sortingOptions } from "../../constants/Categories";
-import Select from "../Select/Select";
+import Select from "components/Select/Select";
 
 import "./Filter.css";
 
