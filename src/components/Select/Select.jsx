@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 
 import "./Select.css";
 
-const Select = ({ label, value, options, onChange, id }) => {
+const Select = memo(function Select({ label, value, options, onChange, id }) {
     return (
         <div>
             <label htmlFor={id} className="filter_label">
@@ -22,6 +22,6 @@ const Select = ({ label, value, options, onChange, id }) => {
             </select>
         </div>
     );
-};
+});
 
 export default Select;
