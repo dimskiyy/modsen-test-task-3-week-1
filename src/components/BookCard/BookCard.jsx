@@ -5,7 +5,13 @@ import { RoutesConfig } from "../../constants/Routes";
 
 import "./BookCard.css";
 
-const BookCard = ({ id, img, title, authors, category }) => {
+const BookCard = React.memo(function BookCard({
+    id,
+    img,
+    title,
+    authors,
+    category
+}) {
     return (
         <Link
             to={`${RoutesConfig.BOOK_CARD}/${id}`}
@@ -20,6 +26,6 @@ const BookCard = ({ id, img, title, authors, category }) => {
             </div>
         </Link>
     );
-};
+});
 
 export default BookCard;
