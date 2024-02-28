@@ -1,30 +1,36 @@
-import React, { useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import { categories, sortingOptions } from "constants/Categories";
 
 import Select from "components/Select/Select";
 
 import "./Filter.css";
 
-const Filter = ({
+const Filter = memo(function Filter({
     selectedCategory,
     selectedSorting,
     onCategoryChange,
     onSortingChange
-}) => {
+}) {
     const [category, setCategory] = useState(selectedCategory);
     const [sorting, setSorting] = useState(selectedSorting);
 
-    const handleCategoryChange = (e) => {
-        const value = e.target.value;
-        setCategory(value);
-        onCategoryChange(value);
-    };
+    const handleCategoryChange = useCallback(
+        (e) => {
+            const value = e.target.value;
+            setCategory(value);
+            onCategoryChange(value);
+        },
+        [onCategoryChange]
+    );
 
-    const handleSortingChange = (e) => {
-        const value = e.target.value;
-        setSorting(value);
-        onSortingChange(value);
-    };
+    const handleSortingChange = useCallback(
+        (e) => {
+            const value = e.target.value;
+            setSorting(value);
+            onSortingChange(value);
+        },
+        [onSortingChange]
+    );
 
     return (
         <div className="filter">
@@ -44,6 +50,6 @@ const Filter = ({
             />
         </div>
     );
-};
+});
 
 export default Filter;
