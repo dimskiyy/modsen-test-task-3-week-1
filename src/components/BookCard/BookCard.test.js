@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as MemoryRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
 
 import "@testing-library/jest-dom/extend-expect";
@@ -17,9 +17,9 @@ describe("BookCard component", () => {
 
     it("renders book card correctly", () => {
         const { getByText, getByAltText } = render(
-            <Router>
+            <MemoryRouter>
                 <BookCard {...book} />
-            </Router>
+            </MemoryRouter>
         );
         expect(getByAltText("Book Title")).toBeInTheDocument();
         expect(getByText("Book Title")).toBeInTheDocument();
@@ -29,9 +29,9 @@ describe("BookCard component", () => {
 
     it("renders link with correct path", () => {
         const { getByRole } = render(
-            <Router>
+            <MemoryRouter>
                 <BookCard {...book} />
-            </Router>
+            </MemoryRouter>
         );
         const link = getByRole("link");
         expect(link).toHaveAttribute("href", `/Book/${book.id}`);
