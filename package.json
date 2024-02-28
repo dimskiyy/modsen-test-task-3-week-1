@@ -25,7 +25,8 @@
         "eject": "react-scripts eject",
         "prettier": "prettier",
         "lint": "eslint -c .eslintrc.json --ext .js,.jsx .",
-        "lint:fix": "npm run lint -- --fix"
+        "lint:fix": "npm run lint -- --fix",
+        "prepare": "husky"
     },
     "eslintConfig": {
         "extends": [
@@ -61,11 +62,5 @@
         "src/**/*.{jsx,js}": [
             "npm run lint:fix"
         ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "pre-push": "npm run test"       
-      }
     }
 }
