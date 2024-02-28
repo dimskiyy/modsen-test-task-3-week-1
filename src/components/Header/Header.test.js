@@ -16,5 +16,4 @@ describe("Header component", () => {
         const titleElement = getByText("Search for books");
         expect(titleElement).toBeInTheDocument();
     });
-
 });
