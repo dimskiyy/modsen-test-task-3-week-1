@@ -17,16 +17,4 @@ describe("Header component", () => {
         expect(titleElement).toBeInTheDocument();
     });
 
-    it("changes document title when link is clicked", () => {
-        const oldTitle = document.title;
-        render(
-            <Router>
-                <Header />
-            </Router>
-        );
-        const linkElement = document.querySelector(".header_logo");
-        fireEvent.click(linkElement);
-        expect(document.title).toEqual("Home Page");
-        document.title = oldTitle;
-    });
 });

@@ -19,7 +19,7 @@ describe("ErrorMessage component", () => {
     it("renders error image with correct source", () => {
         const { getByAltText } = render(<ErrorMessage />);
         const errorImage = getByAltText("Error");
-        expect(errorImage).toHaveAttribute("src", "error.gif");
+        expect(errorImage).toHaveAttribute("src", "error.png");
     });
 
     it("renders error message with correct text", () => {
