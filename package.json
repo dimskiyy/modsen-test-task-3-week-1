@@ -57,14 +57,15 @@
         "prettier": "^3.2.5",
         "react-test-renderer": "^18.2.0"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "lint-staged": {
-        "*.{jsx, js}": [
+        "src/**/*.{jsx,js}": [
             "npm run lint:fix"
         ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "npm run test"       
+      }
     }
 }
