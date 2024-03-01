@@ -23,7 +23,7 @@ const SearchForm = ({ setSearch }) => {
                     placeholder="Book name"
                     value={query}
                     onChange={handleInputChange}
-                ></input>
+                />
                 <button
                     className="search_btn"
                     type="submit"
