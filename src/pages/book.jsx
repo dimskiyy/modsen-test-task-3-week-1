@@ -8,14 +8,14 @@ import "styles/Layout.css";
 
 const Book = () => {
     return (
-        <div>
+        <>
             <div className="header_detail">
                 <Header />
             </div>
             <ErrorBoundary>
                 <BookDetail />
             </ErrorBoundary>
-        </div>
+        </>
     );
 };
 
