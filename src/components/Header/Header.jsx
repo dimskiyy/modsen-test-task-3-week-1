@@ -6,7 +6,7 @@ import "./Header.css";
 
 const Header = () => {
     return (
-        <div className="header header_wrapper">
+        <div className="header">
             <h1 className="header_title">
                 <Link className="header_logo" to={RoutesConfig.HOME}>
                     Search for books
