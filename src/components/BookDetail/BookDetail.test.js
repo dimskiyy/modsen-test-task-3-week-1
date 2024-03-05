@@ -1,7 +1,9 @@
 import React from "react";
 import { render, waitFor } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import axios from "axios";
+
+import "@testing-library/jest-dom/extend-expect";
+
 import BookDetail from "./BookDetail";
 
 jest.mock("axios");
