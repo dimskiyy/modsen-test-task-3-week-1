@@ -13,6 +13,7 @@
     margin-bottom: 1em;
     color: var(--black);
     font-size: 20px;
+    font-weight: bold;
 }
 .load_btn {
     margin: 40px auto 50px;
