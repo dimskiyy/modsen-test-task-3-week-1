@@ -28,19 +28,15 @@
 }
 .book_category {
     color: var(--gray-senary);
-    font-size: 16px;
     margin-bottom: 40px;
 }
 .book_title {
-    font-weight: bold;
     color: var(--black);
-    font-size: 30px;
     margin-bottom: 10px;
 }
 .book_authors {
     color: var(--gray-senary);
     text-decoration: underline;
-    font-size: 16px;
     margin-bottom: 30px;
 }
 .book_description {
