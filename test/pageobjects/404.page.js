@@ -1,12 +1,14 @@
-const { browser } = require('@wdio/globals');
+const { browser } = require("@wdio/globals");
 
 class NotFoundPage {
     open() {
-        return browser.url('/404');
+        return browser.url("/404");
     }
 
     get mainMessage() {
-        return $('//Typography[contains(text(), "The page you’re looking for doesn’t exist.")]');
+        return $(
+            '//Typography[contains(text(), "The page you’re looking for doesn’t exist.")]'
+        );
     }
 
     get notFoundText() {
