@@ -31,7 +31,6 @@
     margin-bottom: 40px;
 }
 .book_title {
-    color: var(--black);
     margin-bottom: 10px;
 }
 .book_authors {
@@ -41,7 +40,6 @@
 }
 .book_description {
     font-weight: 500;
-    color: var(--black);
     min-height: 50px;
     border: 1px solid var(--black);
     font-size: 13px;

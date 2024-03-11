@@ -17,17 +17,17 @@
 }
 .card_title {
     margin-bottom: 0.5rem;
-    color: var(--black);
+    /* color: var(--black); */
     text-overflow: ellipsis;
 }
 .card_category {
     margin-bottom: 0.5rem;
     font-size: 15px;
-    color: var(--black);
+    /* color: var(--black); */
 }
 .card_authors {
     margin-bottom: 0;
-    color: var(--black);
+    /* color: var(--black); */
 }
 
 @media (min-width: 480px) {
