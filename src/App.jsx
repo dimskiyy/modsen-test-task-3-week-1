@@ -6,6 +6,7 @@ import { CssBaseline, IconButton, ThemeProvider } from "@mui/material";
 import { RoutesConfig } from "constants/Routes";
 import NotFound from "pages/404/NotFound";
 import Book from "pages/book";
+import Favorites from "pages/favorites";
 import Home from "pages/home";
 import { darkTheme } from "themes/darkTheme";
 import { mainTheme } from "themes/mainTheme";
@@ -32,6 +33,7 @@ function App() {
             <Routes>
                 <Route path={RoutesConfig.HOME} element={<Home />} />
                 <Route path={RoutesConfig.BOOK} element={<Book />} />
+                <Route path={RoutesConfig.FAVORITES} element={<Favorites />} />
                 <Route path={RoutesConfig.NOT_FOUND} element={<NotFound />} />
             </Routes>
         </ThemeProvider>
