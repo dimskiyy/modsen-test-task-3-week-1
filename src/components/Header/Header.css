@@ -18,6 +18,15 @@
 .header_logo:hover {
     color: inherit;
 }
+.header_fav {
+    font-size: 30px;
+    color: var(--white-quaternary);
+    margin: auto;
+}
+.fav_link {
+    color: inherit;
+    text-decoration: none;
+}
 @media (min-width: 770px) {
     .header {
         flex-direction: row;

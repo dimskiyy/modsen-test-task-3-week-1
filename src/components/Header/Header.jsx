@@ -12,6 +12,11 @@ const Header = () => {
                     Search for books
                 </Link>
             </h1>
+            <h2 className="header_fav">
+                <Link className="fav_link" to={RoutesConfig.FAVORITES}>
+                    Favorite
+                </Link>
+            </h2>
         </div>
     );
 };
