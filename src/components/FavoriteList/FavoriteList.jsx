@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Typography } from "@mui/material";
-import { useAppContext } from "context/appContext";
+import { useAppContext } from "hooks/useAppContext";
 
 import BookCard from "components/BookCard/BookCard";
 

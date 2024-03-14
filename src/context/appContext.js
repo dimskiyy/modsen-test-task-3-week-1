@@ -1,23 +1,11 @@
-import React, { createContext, useContext, useState } from "react";
-
-const AppContext = createContext(null);
-
-export const useAppContext = () => {
-    const context = useContext(AppContext);
-
-    if (context === undefined) {
-        throw new Error("App context must be with appContextProvider");
-    }
-
-    return context;
-};
+import React, { useState } from "react";
+import AppContext from "hooks/useAppContext";
 
 const AppContextProvider = ({ children }) => {
     const [favorites, setFavorites] = useState([]);
 
     const addToFavorite = (book) => {
         const oldFavorites = [...favorites];
-
         const newFavorites = oldFavorites.concat(book);
         setFavorites(newFavorites);
     };
@@ -25,7 +13,6 @@ const AppContextProvider = ({ children }) => {
     const removeToFavorite = (id) => {
         const oldFavorites = [...favorites];
         const newFavorites = oldFavorites.filter((book) => book.id !== id);
-
         setFavorites(newFavorites);
     };
 
